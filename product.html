@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head><script src="config.js"></script>
+<script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechHub 全部電腦硬件商品 - 顯示卡、處理器、記憶體、SSD、主機板、電源、機箱、鍵盤">
+  <title>全部商品 | TechHub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="config.js"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="TechHub Logo">
+      <span>TechHub</span>
+    </div>
+    <ul>
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="cart.html">購物車 <span id="cartCount" class="cart-badge"></span></a></li>
+      <li><a href="about.html">關於我們</a></li>
+    </ul>
+  </nav>
+
+  <header class="banner">
+    <h1>全部硬件</h1>
+    <p>精選頂級電腦零件，滿足你的砌機需求</p>
+  </header>
+
+  <main class="container">
+
+    <h2 class="section-title">🛠️ 所有商品</h2>
+
+    <!-- 商品卡由 script.js 的 renderProducts() 動態生成 -->
+    <div class="grid" id="productGrid"></div>
+
+  </main>
+
+  <footer>
+    <p>© <span data-copyright-year>2025</span> <span data-brand-en>TechHub</span> <span data-brand-zh>電腦硬件專門店</span>　|　為你的電腦注入最強動力 💻</p>
+    <p>
+      <a href="index.html">首頁</a>
+      <a href="products.html">商品</a>
+      <a href="cart.html">購物車</a>
+      <a href="about.html">關於我們</a>
+    </p>
+  </footer>
+
+  <button id="backTop" aria-label="回到頂部">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head><script src="config.js"></script>
+<script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechHub 購物車 - 查看已選硬件、修改數量、計算總額">
+  <title>購物車 | TechHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="TechHub Logo">
+      <span>TechHub</span>
+    </div>
+    <ul>
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="cart.html" class="active">購物車 <span id="cartCount" class="cart-badge"></span></a></li>
+      <li><a href="about.html">關於我們</a></li>
+    </ul>
+  </nav>
+
+  <header class="banner">
+    <h1>🛒 我的購物車</h1>
+    <p>選擇硬件、輸入數量，即時計算總額</p>
+  </header>
+
+  <main class="container">
+
+    <!-- ========== 區塊 A：已加入購物車的清單 ========== -->
+    <h2 class="section-title">已選商品</h2>
+
+    <!-- 由 script.js 的 renderCartPage() 動態渲染 -->
+    <div id="cartList" class="cart-list"></div>
+
+    <!-- ========== 區塊 B：單品快速計算（原購物車功能保留） ========== -->
+    <h2 class="section-title">🧮 單品快速計算</h2>
+
+    <div class="form-box">
+      <div class="form-group">
+        <label for="customerName">您的姓名：</label>
+        <input type="text" id="customerName" placeholder="請輸入姓名" autocomplete="name">
+      </div>
+
+      <div class="form-group">
+        <label for="productSelect">選擇硬件：</label>
+        <select id="productSelect">
+          <!-- 由 script.js 動態填充，若 JS 失效則顯示這行提示 -->
+          <option value="">載入中…</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">數量：</label>
+        <input type="number" id="quantity" value="1" min="1" max="99" inputmode="numeric">
+      </div>
+
+      <button class="btn" id="calcBtn">計算總額</button>
+    </div>
+
+    <!-- 結果顯示 -->
+    <div class="result-box" id="resultBox">
+      <p>請輸入姓名、選擇硬件及數量，然後按「計算總額」。</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2025 TechHub 電腦硬件專門店</p>
+    <p>
+      <a href="index.html">首頁</a>
+      <a href="cart.html">購物車</a>
+      <a href="about.html">關於我們</a>
+    </p>
+  </footer>
+
+  <button id="backTop" aria-label="回到頂部">↑</button>
+  <script src="script.js" defer></script>
+</body>
+</html>
