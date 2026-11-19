@@ -272,10 +272,12 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCartBadge();
   initBackTop();
 
+
   if ($('homeHotGrid'))     renderProducts('homeHotGrid', ['gpu-4070', 'cpu-i7', 'ram-ddr5-32']);
   if ($('homeCategoryBar')) renderCategoryBar('homeCategoryBar');
   if ($('productGrid'))     renderProducts('productGrid');
   if ($('cartList'))        renderCartPage();
+
 
   const selectEl = $('productSelect');
   if (selectEl) {
