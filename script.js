@@ -102,7 +102,7 @@ function showToast(msg) {
 /* ---------- 商品卡 HTML ---------- */
 function cardHTML(p) {
   return `
-    <img src="images/${escapeHTML(p.img)}" alt="${escapeHTML(p.name)}" loading="lazy">
+    <img src="${escapeHTML(p.img)}" alt="${escapeHTML(p.name)}" loading="lazy">
     <div class="info">
       <h3>${escapeHTML(p.name)}</h3>
       <p class="spec">${escapeHTML(p.spec)}</p>
@@ -149,7 +149,7 @@ function renderCartPage() {
 
   listEl.innerHTML = cart.map(item => `
     <div class="cart-item" data-id="${item.id}">
-      <img src="images/${escapeHTML(item.img)}" alt="${escapeHTML(item.name)}" loading="lazy">
+      <img src="${escapeHTML(item.img)}" alt="${escapeHTML(item.name)}" loading="lazy">
       <span class="item-name">${escapeHTML(item.name)}</span>
       <span class="item-price">${fmt(item.price)}</span>
       <div class="qty-control">
